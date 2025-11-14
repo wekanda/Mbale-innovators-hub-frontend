@@ -1,3 +1,4 @@
+/* === Global Styles: Professional Light Theme === */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +6,536 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa; /* A soft, light grey background */
+  color: #212529; /* High-contrast dark text */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  color: #343a40;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h2 {
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #dee2e6;
+  margin: 3rem 0;
 }
 
-.read-the-docs {
-  color: #888;
+/* === Project List & Card Styles === */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #007bff; /* A standard, professional blue */
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  color: #495057; /* A softer dark grey for paragraph text */
+  line-height: 1.6;
+}
+
+.project-card strong {
+  color: #343a40;
+}
+
+.project-card a {
+  color: #007bff;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* === Login Form Styles === */
+.login-container {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.login-container h2 {
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  color: #212529;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.form-group input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+button[type='submit'] {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type='submit']:hover {
+  background-color: #0056b3;
+}
+/* === Navbar Styles === */
+.navbar {
+  background: #ffffff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  color: #212529;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #495057;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-links:hover {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  transition: all 0.2s ease-out;
+}
+
+/* Main container for page content */
+.container {
+  padding: 0 2rem;
+}
+/* Supervisor Action Button Styles */
+.action-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-approve {
+  background-color: #28a745; /* Green */
+}
+
+.btn-reject {
+  background-color: #dc3545; /* Red */
+}
+/* Supervisor Action Button Styles */
+.action-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-approve {
+  background-color: #28a745; /* Green */
+}
+
+.btn-reject {
+  background-color: #dc3545; /* Red */
+}
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  color: #212529;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+/* Supervisor Action Button Styles */
+.action-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-approve {
+  background-color: #28a745; /* Green */
+}
+
+.btn-reject {
+  background-color: #dc3545; /* Red */
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  color: #212529;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+/* Project Card Link Style */
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+/* Project Detail Page Styles */
+.project-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.project-detail-container h2 {
+  text-align: center;
+  border-bottom: none;
+}
+
+.project-author {
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.project-detail-content h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #343a40;
+}
+
+.project-detail-content ul {
+  padding-left: 20px;
+}
+/* My Projects List Styles */
+.my-project-card {
+  padding: 16px;
+  margin-bottom: 1rem;
+}
+
+.my-project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.my-project-header h4 {
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #ffc107; /* Yellow */
+  color: #212529;
+}
+
+.status-approved {
+  background-color: #28a745; /* Green */
+}
+
+.status-rejected {
+  background-color: #dc3545; /* Red */
+}
+
+.supervisor-comment {
+  background-color: #fff3cd; /* Light yellow */
+  border-left: 4px solid #ffc107;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 4px;
+  font-style: italic;
+}
+/* Pagination Styles */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.pagination-controls .btn {
+  background-color: #007bff;
+}
+
+.pagination-controls .btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+/* Search Bar Styles */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.gallery-header h2 {
+  margin: 0;
+}
+
+.search-bar-container {
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* Edit Project Link on Detail Page */
+.edit-project-link {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.edit-project-link .btn {
+  background-color: #ffc107;
+  color: #212529;
 }
